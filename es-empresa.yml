@@ -1,0 +1,22 @@
+server:
+  port: 8076
+springdoc:
+  packages-to-scan: com.righttek.es.empresa.controller
+  pathsToMatch: /v1, /api/es/empresa/**
+
+# CONECCION A BASE DE DATOS
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/GOTALENT
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+# Hibernate ddl auto (create, create-drop, validate, update)
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      jdbc:
+        lob:
+          non_contextual_creation: true

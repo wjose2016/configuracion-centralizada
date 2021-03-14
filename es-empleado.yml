@@ -1,0 +1,24 @@
+server:
+  port: 8072
+
+# CONECCION A BASE DE DATOS
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/GOTALENT
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+# Hibernate ddl auto (create, create-drop, validate, update)
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      jdbc:
+        lob:
+          non_contextual_creation: true
+
+# SERVICIOS A CONSUMIR
+uri:
+  nomina-externa: "http://localhost:8082"
+
